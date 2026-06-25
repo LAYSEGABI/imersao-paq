@@ -1,0 +1,293 @@
+.imersao-wrapper {
+  padding: 4rem 0;
+  background-color: var(--bg-main);
+}
+
+/* --- Bloco Superior (Grid Principal) --- */
+.imersao-top-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr; /* O card esquerdo é menor que o direito */
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* Bordas e fundos iguais para os cards */
+.imersao-intro-card, .imersao-info-card, .imersao-cta-banner {
+  border: 2px solid var(--color-primary);
+  border-radius: 20px;
+  background-color: var(--bg-main);
+  padding: 2.5rem;
+}
+
+.text-highlight {
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+/* --- Card Esquerdo: Introdução --- */
+.imersao-intro-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.imersao-intro-card h2 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.imersao-intro-card p {
+  font-size: 1rem;
+  color: var(--text-body);
+  margin-bottom: 2rem;
+}
+
+.imersao-intro-image {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: auto;
+}
+
+.imersao-intro-image img {
+  width: 100%;
+  max-width: 250px;
+  object-fit: contain;
+}
+
+/* --- Card Direito: Informações --- */
+.info-main-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--text-title);
+  margin-bottom: 2rem;
+}
+
+.imersao-info-content {
+  display: flex;
+  gap: 3rem;
+  margin-bottom: 2rem;
+}
+
+.imersao-requisitos {
+  flex: 1;
+}
+
+.imersao-locais {
+  flex: 1.5;
+  border-left: 1px solid var(--border-color);
+  padding-left: 3rem;
+}
+
+.info-subtitle {
+  color: var(--color-primary);
+  font-size: 1.125rem;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+/* Lista de Requisitos */
+.requisitos-lista li {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+  color: var(--text-title);
+}
+
+.icon-check {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
+/* Grid de Locais */
+.locais-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.local-card {
+  border: 1px solid var(--text-body);
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.local-text {
+  padding: 1.25rem;
+  flex: 1;
+}
+
+.local-text h5 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-title);
+  margin-bottom: 0.5rem;
+}
+
+.local-text p {
+  font-size: 0.85rem;
+  color: var(--text-body);
+  line-height: 1.4;
+}
+
+.local-img {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+}
+
+/* Horários */
+.imersao-horarios {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid var(--color-primary);
+  padding-top: 1.5rem;
+  border-radius: 0 0 20px 20px;
+}
+
+.horario-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.9rem;
+  color: var(--text-title);
+}
+
+.icon-schedule {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+/* --- Banner Inferior --- */
+.imersao-cta-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.cta-banner-text {
+  flex: 1;
+}
+
+.cta-banner-text h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.cta-banner-action {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.cta-banner-action p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--text-title);
+}
+
+.cta-button-group {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.btn-participar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  background-color: var(--color-primary);
+  color: #000000;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 1rem;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.btn-participar:hover {
+  filter: brightness(1.1);
+  transform: scale(1.05);
+}
+
+.icon-rocket {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+/* --- Responsividade --- */
+
+@media (max-width: 1024px) {
+  .imersao-top-grid {
+    grid-template-columns: 1fr; /* Empilha os dois cards grandes */
+  }
+
+  .imersao-intro-card {
+    text-align: center;
+    align-items: center;
+  }
+
+  .imersao-intro-image img {
+    margin-top: 2rem;
+  }
+
+  .imersao-cta-banner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .cta-button-group {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .imersao-info-content {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .imersao-locais {
+    border-left: none;
+    border-top: 1px solid var(--border-color);
+    padding-left: 0;
+    padding-top: 2rem;
+  }
+
+  .locais-grid {
+    grid-template-columns: 1fr; /* Uma turma por linha no mobile */
+  }
+
+  .imersao-horarios {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+
+  .cta-button-group {
+    flex-direction: column;
+  }
+
+  .btn-participar {
+    width: 100%;
+  }
+
+  .icon-rocket {
+    display: none; /* Oculta o foguete no mobile para dar mais foco ao botão */
+  }
+}

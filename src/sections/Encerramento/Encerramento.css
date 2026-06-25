@@ -1,0 +1,132 @@
+.encerramento-wrapper {
+  padding: 2rem 0 6rem 0; /* Espaçamento maior embaixo para finalizar a página */
+  background-color: var(--bg-main);
+}
+
+.encerramento-content {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+/* --- Bloco Superior --- */
+.encerramento-text-block {
+  max-width: 650px;
+}
+
+.encerramento-text-block h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.4;
+  margin-bottom: 2rem;
+  color: var(--text-title);
+}
+
+.text-purple {
+  color: var(--color-secondary); /* Usa o roxo do PAQ */
+}
+
+.encerramento-benefits {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.encerramento-benefits li {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: var(--text-body);
+  font-size: 1.1rem;
+}
+
+.icon-check-purple {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  flex-shrink: 0;
+  /* Se quiser simular a bolinha roxa com a imagem vazada: */
+  background-color: var(--color-secondary);
+  border-radius: 50%;
+  padding: 4px; 
+}
+
+/* --- Banner Inferior --- */
+.encerramento-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--bg-main);
+  border: 1px solid var(--color-secondary); /* Borda roxa fina acompanhando o design */
+  border-radius: 16px;
+  padding: 2rem 3rem;
+  gap: 2rem;
+}
+
+.banner-info {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.icon-people {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.banner-text h3 {
+  color: var(--text-title);
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.banner-text p {
+  color: var(--text-body);
+  font-size: 1rem;
+  margin: 0;
+}
+
+.banner-graphic {
+  flex-shrink: 0;
+}
+
+.icon-handwritten {
+  height: 60px; /* Ajuste conforme a imagem real do texto verde */
+  object-fit: contain;
+}
+
+/* --- Responsividade --- */
+@media (max-width: 1024px) {
+  .encerramento-banner {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem;
+  }
+
+  .banner-info {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .encerramento-text-block h2 {
+    font-size: 1.75rem;
+  }
+
+  .encerramento-benefits li {
+    font-size: 1rem;
+    align-items: flex-start;
+  }
+
+  .icon-check-purple {
+    margin-top: 2px;
+  }
+  
+  .icon-handwritten {
+    height: 50px;
+  }
+}

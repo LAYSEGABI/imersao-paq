@@ -1,0 +1,124 @@
+.viver-wrapper {
+  padding: 4rem 0;
+  background-color: var(--bg-main);
+}
+
+.viver-main-container {
+  border: 2px solid var(--color-primary);
+  border-radius: 20px;
+  padding: 4rem;
+  background-color: var(--bg-main);
+}
+
+.viver-header {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.viver-header h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.text-highlight {
+  color: var(--color-primary);
+}
+
+.viver-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+/* --- Novos estilos do Card --- */
+
+.viver-card {
+  display: flex;
+  flex-direction: column; /* O card agora empilha o cabeçalho e o texto verticalmente */
+  padding: 2rem;
+  border: 1px solid var(--color-primary);
+  border-radius: 16px;
+  background-color: var(--bg-card);
+  transition: transform 0.3s ease;
+}
+
+.viver-card:hover {
+  transform: translateY(-5px);
+}
+
+.viver-card-header {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem; /* Espaço entre o título/ícone e a descrição */
+}
+
+.viver-card-icon {
+  flex-shrink: 0;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.viver-card-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.viver-card-header h3 {
+  color: var(--text-title);
+  font-size: 1.125rem;
+  font-weight: 700;
+  margin: 0; /* Remove a margem inferior padrão para ficar alinhado com o ícone */
+}
+
+.viver-card-body p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--text-body);
+  margin: 0;
+}
+
+/* --- Responsividade --- */
+
+@media (max-width: 1024px) {
+  .viver-main-container {
+    padding: 3rem 2rem;
+  }
+
+  .viver-header h2 {
+    font-size: 2rem;
+  }
+
+  .viver-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .viver-main-container {
+    padding: 2rem 1.5rem;
+  }
+
+  .viver-header h2 {
+    font-size: 1.75rem;
+    flex-wrap: wrap;
+  }
+
+  .viver-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  /* No celular, podemos manter a mesma estrutura flexível que criamos */
+  .viver-card {
+    padding: 1.5rem;
+  }
+}

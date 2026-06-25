@@ -1,0 +1,269 @@
+.form-wrapper {
+  padding: 4rem 0;
+  background-color: var(--bg-main);
+}
+
+.form-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  padding: 3rem;
+}
+
+/* --- Stepper (Barra de Progresso) --- */
+.form-stepper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 4rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.step-wrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+  flex: 1;
+}
+
+.step-wrapper:last-child {
+  flex: 0;
+}
+
+.step-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #2A3241;
+  color: var(--text-body);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  z-index: 2;
+  transition: all 0.3s ease;
+}
+
+.step-circle.active {
+  background-color: var(--color-secondary); /* O roxo do design */
+  color: #FFFFFF;
+}
+
+.step-title {
+  position: absolute;
+  top: 55px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.85rem;
+  color: var(--text-body);
+  white-space: nowrap;
+  font-weight: 500;
+}
+
+.step-title.active-text {
+  color: #FFFFFF;
+}
+
+.step-wrapper:first-child .step-title {
+  left: 20px;
+}
+
+.step-wrapper:last-child .step-title {
+  left: auto;
+  right: 0;
+  transform: none;
+}
+
+.step-line {
+  height: 2px;
+  background-color: #2A3241;
+  flex: 1;
+  margin: 0 10px;
+  transition: all 0.3s ease;
+}
+
+.step-line.active-line {
+  background-color: var(--color-secondary);
+}
+
+/* --- Layout do Formulário (Duas Colunas) --- */
+.form-content {
+  display: flex;
+  gap: 4rem;
+}
+
+/* Sidebar Esquerda */
+.form-sidebar {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-sidebar h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  margin-bottom: 1rem;
+}
+
+.form-sidebar p {
+  font-size: 1.1rem;
+  color: var(--text-body);
+  line-height: 1.6;
+}
+
+.form-security-badge {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-top: auto; /* Empurra para o final da coluna */
+  padding-top: 2rem;
+}
+
+.form-security-badge span {
+  font-size: 0.85rem;
+  color: var(--text-body);
+  line-height: 1.4;
+}
+
+/* Campos da Direita */
+.form-fields-container {
+  flex: 1.5;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.input-group.full-width {
+  grid-column: span 2;
+}
+
+.input-group label {
+  color: #FFFFFF;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.input-hint {
+  font-size: 0.85rem;
+  color: var(--text-body);
+  margin-bottom: 0.5rem;
+}
+
+/* Estilização dos Inputs e Selects */
+input, select, textarea {
+  background-color: #0B0E14; /* Fundo escuro igual ao body */
+  border: 1px solid var(--border-color);
+  color: #FFFFFF;
+  padding: 1rem 1.2rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: border-color 0.3s ease;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: var(--color-secondary);
+}
+
+textarea {
+  resize: vertical;
+}
+
+/* --- Botões de Ação --- */
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 2.5rem;
+}
+
+.btn-voltar {
+  padding: 1rem 2rem;
+  color: #FFFFFF;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 8px;
+  transition: opacity 0.2s ease;
+}
+
+.btn-voltar:hover {
+  opacity: 0.8;
+}
+
+.btn-continuar {
+  background-color: var(--color-secondary);
+  color: #FFFFFF;
+  padding: 1rem 3rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: filter 0.2s ease, transform 0.2s ease;
+}
+
+.btn-continuar:hover {
+  filter: brightness(1.1);
+  transform: scale(1.02);
+}
+
+.btn-finalizar {
+  background-color: var(--color-primary);
+  color: #000000;
+}
+
+/* --- Responsividade --- */
+@media (max-width: 1024px) {
+  .form-content {
+    flex-direction: column;
+    gap: 3rem;
+  }
+  
+  .form-sidebar .form-security-badge {
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .form-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .form-stepper {
+    margin-bottom: 2.5rem;
+  }
+
+  .step-title {
+    display: none; /* Esconde os textos do stepper no celular para não encavalar */
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr; /* Todos os inputs empilhados no mobile */
+  }
+
+  .input-group.full-width {
+    grid-column: span 1;
+  }
+
+  .form-actions {
+    flex-direction: column-reverse;
+  }
+
+  .btn-continuar, .btn-voltar {
+    width: 100%;
+    justify-content: center;
+  }
+}

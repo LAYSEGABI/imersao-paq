@@ -1,0 +1,25 @@
+import './Header.css';
+import LogoPaq from "../../assets/logoPAQ.svg"
+
+export default function Header() {
+  return (
+    <header className="header-wrapper">
+      <div className="container header-content">
+        <div className="header-logo">
+          <img src={LogoPaq} alt="Logo Prototipando a Quebrada" />
+        </div>
+
+        <nav className="header-nav">
+          <a href="#sobre">Sobre o PAQ</a>
+          <a href="#jornada">Jornada</a>
+        </nav>
+
+        <div className="header-cta">
+          <a href="#formulario" className="btn-inscreva-se">
+            Inscreva-se
+          </a>
+        </div>
+      </div>
+    </header>
+  );
+}

@@ -1,0 +1,198 @@
+.jornada-wrapper {
+  padding: 4rem 0;
+  background-color: var(--bg-main);
+}
+
+.jornada-main-container {
+  border: 2px solid var(--color-primary);
+  border-radius: 20px;
+  padding: 4rem 2rem;
+  background-color: var(--bg-main);
+}
+
+/* --- Cabeçalho com as imagens laterais --- */
+.jornada-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.splash-img {
+  width: 60px; /* Tamanho do espaço para a imagem de splash */
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.splash-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.jornada-header-text {
+  text-align: center;
+}
+
+.jornada-header-text h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+}
+
+.jornada-header-text p {
+  color: var(--text-title);
+  font-size: 1.125rem;
+}
+
+/* --- Trilha (Timeline) --- */
+.jornada-timeline {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.jornada-step {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Alinhamento dos textos */
+  max-width: 250px;
+}
+
+.jornada-icon {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 1.5rem auto; /* Centraliza a imagem no próprio container da etapa */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.jornada-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Container do título com o número */
+.jornada-step-title {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.25rem;
+}
+
+.step-number {
+  background-color: var(--color-primary);
+  color: #000000;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.jornada-step-title h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-title);
+  margin: 0;
+}
+
+.step-duration {
+  font-size: 0.9rem;
+  color: var(--text-body);
+  margin-bottom: 1rem;
+  margin-left: 2.5rem; /* Alinha com o texto do h3, ignorando o badge de número */
+}
+
+.jornada-step p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--text-body);
+}
+
+.text-highlight {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+/* --- Setas Conectoras --- */
+.jornada-arrow {
+  color: var(--text-body);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 60px; /* Alinha a seta com o meio dos ícones (120px/2) */
+  flex-shrink: 0;
+}
+
+/* --- Responsividade --- */
+
+@media (max-width: 1024px) {
+  .jornada-main-container {
+    padding: 3rem 1.5rem;
+  }
+  
+  .jornada-header h2 {
+    font-size: 2rem;
+  }
+
+  .splash-img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .jornada-timeline {
+    gap: 0.5rem;
+  }
+  
+  .jornada-arrow {
+    width: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .jornada-header {
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 3rem;
+  }
+
+  .jornada-header-text h2 {
+    font-size: 1.75rem;
+  }
+
+  .splash-img {
+    display: none; /* Esconde os splashs no celular para economizar espaço */
+  }
+
+  .jornada-timeline {
+    flex-direction: column; /* Empilha as etapas verticalmente */
+    align-items: center;
+    gap: 3rem;
+  }
+
+  .jornada-step {
+    max-width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+
+  .step-duration {
+    margin-left: 0; /* Centraliza a duração no celular */
+  }
+
+  .jornada-arrow {
+    display: none; /* Esconde as setas horizontais no celular */
+  }
+}

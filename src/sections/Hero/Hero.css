@@ -1,0 +1,109 @@
+.hero-wrapper {
+  padding: 4rem 0 2rem 0;
+  background-color: var(--bg-main);
+  overflow: hidden; /* Evita que a barra de rolagem horizontal apareça se a imagem passar muito */
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  max-height: 70vh;
+}
+
+.hero-text {
+  flex: 1; /* Ocupa os 50% da esquerda */
+  max-width: 50%;
+  position: relative;
+  z-index: 2; /* Garante que o texto fique sempre por cima da imagem */
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+}
+
+.text-highlight {
+  color: var(--color-primary);
+}
+
+.hero-text p {
+  font-size: 1.125rem;
+  margin-bottom: 2.5rem;
+  max-width: 90%;
+}
+
+.btn-hero {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background-color: var(--color-primary);
+  color: #000000;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 1.125rem;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.btn-hero:hover {
+  filter: brightness(1.1);
+  transform: scale(1.05);
+}
+
+.hero-image {
+  flex: 1; /* Ocupa os 50% da direita */
+  position: relative;
+  display: flex;
+  justify-content: center;
+  z-index: 1; /* Fica atrás do texto caso haja colisão */
+}
+
+/* O "Pulo do Gato" para a imagem dar o efeito de invadir o espaço do texto */
+.hero-image img {
+  width: 120%; /* Faz a imagem ser maior que a caixa dela */
+  max-width: none;
+  transform: translateX(-5%); /* Puxa ela um pouco para a esquerda, misturando com o texto */
+}
+
+/* --- Responsividade --- */
+
+@media (max-width: 1024px) {
+  .hero-text h1 {
+    font-size: 2.8rem;
+  }
+  .hero-image img {
+    width: 110%; /* Reduz a escala da imagem em telas médias */
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-content {
+    flex-direction: column; /* Coloca o texto em cima e imagem embaixo */
+    text-align: center;
+  }
+
+  .hero-text {
+    max-width: 100%;
+    order: 1;
+  }
+
+  .hero-text p {
+    margin: 0 auto 2rem auto;
+  }
+
+  .hero-image {
+    max-width: 100%;
+    order: 2;
+    margin-top: 2rem;
+  }
+
+  .hero-image img {
+    width: 100%; /* No celular, a imagem volta a respeitar os limites da tela */
+    max-width: 500px;
+    transform: translateX(0); /* Remove o deslocamento para a esquerda */
+  }
+}

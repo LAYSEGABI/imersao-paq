@@ -1,0 +1,82 @@
+.header-wrapper {
+  background-color: var(--bg-main);
+  padding: 1.5rem 0; /* Agora o espaçamento de cima e baixo fica na caixa de fora */
+}
+
+/* O flexbox agora vai direto no conteúdo dentro do container */
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* O resto do CSS (logo, nav, botão e media query) continua igualzinho! */
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 5%;
+  background-color: var(--bg-main);
+  /* Se quiser que o header fique fixo no topo ao rolar, descomente as linhas abaixo: */
+  /* position: sticky; */
+  /* top: 0; */
+  /* z-index: 100; */
+}
+
+.header-logo img {
+  height: 45px; /* Ajuste essa altura conforme o tamanho real da sua logo */
+  object-fit: contain;
+}
+
+.header-nav {
+  display: flex;
+  gap: 3rem;
+}
+
+.header-nav a {
+  color: var(--text-title);
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.header-nav a:hover {
+  color: var(--color-primary);
+}
+
+.btn-inscreva-se {
+  display: inline-block;
+  background-color: var(--color-primary);
+  color: #000000; /* Cor escura para dar contraste com o azul neon */
+  padding: 0.6rem 2rem;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 1rem;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.btn-inscreva-se:hover {
+  filter: brightness(1.1);
+  transform: scale(1.05);
+}
+
+/* --- Responsividade --- */
+@media (max-width: 768px) {
+  .header-container {
+    padding: 1rem 5%;
+  }
+
+  .header-nav {
+    display: none; /* Esconde os links do meio em telas pequenas */
+  }
+
+  .header-logo img {
+    height: 35px;
+  }
+
+  .btn-inscreva-se {
+    padding: 0.5rem 1.2rem;
+    font-size: 0.9rem;
+  }
+}

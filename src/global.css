@@ -1,0 +1,56 @@
+/* src/styles/global.css */
+
+:root {
+  /* Cores de Fundo */
+  --bg-main: #000000;      /* Fundo escuro principal */
+  --bg-card: #151A22;      /* Fundo um pouco mais claro para cards/seções */
+  
+  /* Cores de Destaque (Brand) */
+  --color-primary: #00D2FF;   /* Azul neon (ex: títulos e ícones) */
+  --color-secondary: #7B61FF; /* Roxo (ex: botões e detalhes) */
+  
+  /* Cores de Texto */
+  --text-title: #FFFFFF;      /* Branco puro para títulos */
+  --text-body: #A9B1C2;       /* Cinza claro para textos e parágrafos */
+  
+  /* Outros */
+  --border-color: #2A3241;    /* Cor para bordas sutis */
+  --font-main: 'Inter', system-ui, -apple-system, sans-serif; /* Fonte moderna e limpa */
+}
+
+body {
+  background-color: var(--bg-main);
+  color: var(--text-body);
+  font-family: var(--font-main);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1300px;
+  width: 100%;
+  margin: 0 auto; /* Centraliza o container */
+  padding: 0 5%;  /* Dá um respiro lateral para quando a tela for menor que 1300px */
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-title);
+  line-height: 1.2;
+}
+
+/* Opcional: Estilo global focado na barra de rolagem para combinar com o dark mode */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-main);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-secondary);
+}
