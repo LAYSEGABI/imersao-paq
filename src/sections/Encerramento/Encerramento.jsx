@@ -1,5 +1,5 @@
 import './Encerramento.css';
-import heroIMG from '../../assets/heroIMG.png';
+import heroIMG from '../../assets/heroImg.png';
 
 export default function Encerramento() {
   return (
