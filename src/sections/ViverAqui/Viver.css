@@ -34,7 +34,7 @@
 .viver-card {
   display: flex;
   flex-direction: row; 
-  border: 1px solid rgba(255, 253, 253, 0.212); 
+  border: 1px solid rgba(13, 215, 241, 0.897); 
   border-radius: 16px;
   background: linear-gradient(180deg, var(--bg-card) 0%, #01163657 100%);
   overflow: hidden; 

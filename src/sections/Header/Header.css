@@ -28,6 +28,11 @@
 .header-logo img {
   height: 50px; /* Ajuste essa altura conforme o tamanho real da sua logo */
   object-fit: contain;
+  transition: .3s;
+}
+
+.header-logo img:hover {
+  transform: rotate(-10deg);
 }
 
 .header-nav {

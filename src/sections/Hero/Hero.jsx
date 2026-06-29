@@ -31,15 +31,15 @@ export default function Hero() {
           <div className="hero-features">
             <div className="feature-item">
               <CheckCircle2 size={22} className="feature-icon" />
-              <span>Imersão 100% gratuita</span>
+              <span>100% gratuita</span>
             </div>
             <div className="feature-item">
               <UserCircle2 size={22} className="feature-icon" />
-              <span>Para jovens de 15 a 24 anos</span>
+              <span>Jovens de 15 a 24 anos</span>
             </div>
             <div className="feature-item">
               <MapPin size={22} className="feature-icon" />
-              <span>Turmas em Florianópolis e Palhoça</span>
+              <span>Florianópolis e Palhoça</span>
             </div>
           </div>
 
