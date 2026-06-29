@@ -9,7 +9,7 @@ export default function Hero() {
       <div className="container hero-content">
         <div className="hero-text">
           {/* Transformado em Badge */}
-          <span className="hero-badge"><Rocket size={20}/> Expanda sua visão</span>
+          <span className="hero-badge"><Rocket size={15}/> Expanda sua visão</span>
 
           {/* Título com peso maior */}
           <h1 className="hero-title">

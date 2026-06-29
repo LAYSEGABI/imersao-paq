@@ -16,6 +16,10 @@
   --font-main: 'Poppins', system-ui, -apple-system, sans-serif; /* Fonte moderna e limpa */
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: var(--bg-main);
   color: var(--text-body);

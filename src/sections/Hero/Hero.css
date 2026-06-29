@@ -1,7 +1,6 @@
 .hero-wrapper {
   position: relative;
-  padding: 1rem;
-  min-height: 100vh;
+  padding: 4rem 0rem;
   display: flex;
   align-items: center;
 
@@ -42,7 +41,7 @@
   border: 1px solid var(--color-primary);
 
   color: var(--color-primary);
-  font-size: 0.875rem;
+  font-size: 0.7rem;
   font-weight: 700;
   letter-spacing: 0.5px;
   text-transform: uppercase;
@@ -185,7 +184,7 @@ canvas {
 @media (max-width: 768px) {
   .hero-wrapper {
     min-height: auto;
-    padding: 5rem 0 3rem;
+    padding: 2rem 0 1rem;
   }
 
   .hero-content {
