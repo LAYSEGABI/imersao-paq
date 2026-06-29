@@ -1,5 +1,4 @@
-import Header from './sections/Header/Header';
-import Hero from './sections/Hero/Hero';
+import TopSection from './sections/TopSection';
 import SobrePaq from './sections/Sobre/Sobre';
 import ViverAqui from './sections/ViverAqui/Viver';
 import Jornada from './sections/Jornada/Jornada';
@@ -12,8 +11,7 @@ function App() {
   return (
     <main>
     
-      <Header />
-      <Hero />
+      <TopSection />
       <SobrePaq />
       <ViverAqui />
       <Jornada />

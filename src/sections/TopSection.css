@@ -1,0 +1,15 @@
+.top-section-wrapper {
+  position: relative;
+  width: 100%;
+  /* A cor de fundo escura vem para o pai agora */
+  background-color: var(--bg-main); 
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.top-section-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  pointer-events: none; /* Adicione isso para o mouse atravessar a camada */
+}

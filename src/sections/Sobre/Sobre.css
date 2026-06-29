@@ -1,16 +1,17 @@
 .sobre-wrapper {
-  padding: 4rem 0;
+  padding: 3rem 0;
   background-color: var(--bg-main);
 }
 
 .sobre-card {
   display: flex;
   align-items: center;
-  gap: 4rem;
-  background-color: var(--bg-card);
+  gap: 2rem;
+  background: linear-gradient(180deg, var(--bg-card) 0%, #011636 100%);
   border: 2px solid var(--color-primary);
   border-radius: 20px;
-  padding: 4rem;
+  padding: 1rem;
+  padding-right: 2rem;
 }
 
 .sobre-image {
@@ -41,9 +42,11 @@
 }
 
 .sobre-text p {
-  font-size: 1.125rem;
+  font-size: 1.2rem;
+  color: white;
   margin-bottom: 1.5rem;
-  line-height: 1.6;
+  line-height: 1.4;
+  font-weight: 400;
 }
 
 .sobre-text p:last-child {
