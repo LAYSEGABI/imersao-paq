@@ -167,6 +167,8 @@
 
 /* Estilização dos Inputs e Selects */
 input, select, textarea {
+  box-sizing: border-box; /* O truque mágico: impede que o padding aumente o tamanho final do input */
+  width: 100%; /* Garante que ele respeite exatamente o limite da div pai */
   background-color: #0B0E14; /* Fundo escuro igual ao body */
   border: 1px solid var(--border-color);
   color: #FFFFFF;
@@ -257,6 +259,10 @@ textarea {
 
   .form-grid {
     grid-template-columns: 1fr; /* Todos os inputs empilhados no mobile */
+  }
+
+  .input-group.full-width {
+    grid-column: span 1;
   }
 
   .form-actions {
