@@ -6,13 +6,14 @@
 /* --- Bloco Superior (Grid Principal) --- */
 .imersao-top-grid {
   display: grid;
-  grid-template-columns: 1fr 2fr; /* O card esquerdo é menor que o direito */
-  gap: 2rem;
-  margin-bottom: 2rem;
+  grid-template-columns: 1fr 2fr;
+  /* O card esquerdo é menor que o direito */
+  gap: 1rem;
+  margin-bottom: 1rem;
 }
 
 /* Bordas e fundos iguais para os cards */
-.imersao-intro-card, .imersao-info-card, .imersao-cta-banner {
+.imersao-info-card {
   border: 2px solid var(--color-primary);
   border-radius: 20px;
   background-color: var(--bg-main);
@@ -24,11 +25,16 @@
   font-weight: 700;
 }
 
-/* --- Card Esquerdo: Introdução --- */
 .imersao-intro-card {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  align-items: center;
+
+  border: 2px solid white;
+  border-radius: 20px;
+  background-color: var(--bg-main);
+
+  overflow: hidden;
 }
 
 .imersao-intro-card h2 {
@@ -36,25 +42,29 @@
   font-weight: 800;
   line-height: 1.2;
   margin-bottom: 1rem;
+  padding: 2rem 1rem 0;
+  text-align: center;
 }
 
 .imersao-intro-card p {
   font-size: 1rem;
+  text-align: center;
   color: var(--text-body);
-  margin-bottom: 2rem;
+  padding: 0 1rem;
 }
 
 .imersao-intro-image {
   width: 100%;
   display: flex;
   justify-content: center;
+
+  /* ESSA É A MÁGICA */
   margin-top: auto;
 }
 
 .imersao-intro-image img {
   width: 100%;
-  max-width: 250px;
-  object-fit: contain;
+  display: block;
 }
 
 /* --- Card Direito: Informações --- */
@@ -168,73 +178,113 @@
   object-fit: contain;
 }
 
-/* --- Banner Inferior --- */
+/* --- Banner Inferior (CTA) --- */
 .imersao-cta-banner {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: space-between;
   gap: 2rem;
+  margin-top: 3rem;
+  padding: 2.5rem 2rem;
+  
+  /* Criação do visual de "Card/Banner" */
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.03) 0%, rgba(0, 210, 255, 0.05) 100%);
+  border: 1px solid rgba(0, 210, 255, 0.2);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  
+  /* Transição suave para o efeito hover */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+/* Efeito de flutuação ao passar o mouse */
+.imersao-cta-banner:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(0, 210, 255, 0.15);
+  border-color: rgba(0, 210, 255, 0.5);
 }
 
 .cta-banner-text {
   flex: 1;
-}
-
-.cta-banner-text h2 {
-  font-size: 1.8rem;
-  font-weight: 700;
-  line-height: 1.4;
-}
-
-.cta-banner-action {
-  flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
-}
-
-.cta-banner-action p {
-  font-size: 1rem;
-  line-height: 1.5;
-  color: var(--text-title);
-}
-
-.cta-button-group {
-  display: flex;
-  align-items: center;
   gap: 1rem;
 }
 
-.btn-participar {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.75rem;
-  background-color: var(--color-primary);
-  color: #000000;
-  padding: 1rem 2rem;
-  border-radius: 50px;
+.cta-banner-text h2 {
+  font-size: 1.6rem;
   font-weight: 700;
-  font-size: 1rem;
-  transition: transform 0.2s ease, filter 0.2s ease;
+  line-height: 1.4;
+  margin: 0;
 }
 
-.btn-participar:hover {
-  filter: brightness(1.1);
+.cta-banner-text p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--text-body, #cccccc); /* Cor de texto mais suave para dar contraste com o H2 */
+  margin: 0;
+}
+
+.text-highlight {
+  color: var(--color-primary, #00d2ff); 
+  font-weight: 800;
+}
+
+/* --- Estilo do Botão --- */
+.cta-banner-action {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #000; /* Texto escuro para destacar no fundo claro do botão */
+  background-color: var(--color-primary, #00d2ff);
+  border-radius: 50px;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  white-space: nowrap;
+}
+
+.cta-button:hover {
+  background-color: #ffffff; /* Fica branco ao passar o mouse, ou escolha outra cor */
   transform: scale(1.05);
 }
 
-.icon-rocket {
-  width: 50px;
-  height: 50px;
-  object-fit: contain;
+/* --- Responsividade para Desktop --- */
+@media (min-width: 768px) {
+  .imersao-cta-banner {
+    flex-direction: row;
+    text-align: left;
+    padding: 3rem 4rem;
+  }
+
+  .cta-banner-action {
+    width: auto;
+    justify-content: flex-end;
+  }
+
+  .cta-banner-text h2 {
+    font-size: 1.8rem;
+  }
 }
+
+
 
 /* --- Responsividade --- */
 
 @media (max-width: 1024px) {
   .imersao-top-grid {
-    grid-template-columns: 1fr; /* Empilha os dois cards grandes */
+    grid-template-columns: 1fr;
+    /* Empilha os dois cards grandes */
   }
 
   .imersao-intro-card {
@@ -270,7 +320,8 @@
   }
 
   .locais-grid {
-    grid-template-columns: 1fr; /* Uma turma por linha no mobile */
+    grid-template-columns: 1fr;
+    /* Uma turma por linha no mobile */
   }
 
   .imersao-horarios {
@@ -288,6 +339,7 @@
   }
 
   .icon-rocket {
-    display: none; /* Oculta o foguete no mobile para dar mais foco ao botão */
+    display: none;
+    /* Oculta o foguete no mobile para dar mais foco ao botão */
   }
 }
