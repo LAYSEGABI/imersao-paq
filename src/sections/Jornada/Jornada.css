@@ -51,9 +51,11 @@
   font-weight: 800;
 }
 
-.jornada-header-text p {
+.jornada-header p {
   color: var(--text-title);
   font-size: 1.125rem;
+  align-self: center;
+  text-align: center;
 }
 
 /* --- Trilha (Timeline) --- */
