@@ -323,7 +323,7 @@ export default function Formulario() {
                       >
                         <option value="">Selecione a unidade...</option>
                         <option value="Centro">
-                          Unidade Centro - Saco Grande - Florianópolis
+                          Unidade Centro - Centro - Florianópolis
                         </option>
                         <option value="Pedra Branca">
                           Unidade Pedra Branca - Pedra Branca - Palhoça
