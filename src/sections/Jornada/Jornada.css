@@ -7,7 +7,7 @@
   border: 2px solid var(--color-primary);
   border-radius: 20px;
   padding: 4rem 2rem;
-  background-color: var(--bg-main);
+  background-color: rgba(14, 28, 66, 0.247);
 }
 
 /* --- Cabeçalho com as imagens laterais --- */
@@ -15,9 +15,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 2rem;
-  margin-bottom: 4rem;
+  flex-direction: column;
+  margin-bottom: 2.5rem;
 }
+
 
 .splash-img {
   width: 60px; /* Tamanho do espaço para a imagem de splash */
@@ -33,14 +34,21 @@
   object-fit: contain;
 }
 
+.right img {
+  transform: scaleX(-1);
+}
+
 .jornada-header-text {
+  display: flex;
+  align-items: center;
   text-align: center;
 }
+
+
 
 .jornada-header-text h2 {
   font-size: 2.5rem;
   font-weight: 800;
-  margin-bottom: 0.5rem;
 }
 
 .jornada-header-text p {

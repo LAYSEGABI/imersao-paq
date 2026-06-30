@@ -3,7 +3,7 @@ import heroIMG from '../../assets/heroImg.png';
 
 export default function Imersao() {
   return (
-    <section id="imersao" className="imersao-wrapper">
+    <section id="funciona" className="imersao-wrapper">
       <div className="container">
         
         {/* Bloco Superior: Introdução e Informações */}

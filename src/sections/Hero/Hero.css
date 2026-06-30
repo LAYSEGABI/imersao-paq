@@ -130,6 +130,8 @@
 
 .btn-hero:hover {
   background-position: right top;
+   filter: brightness(1.1);
+  transform: scale(1.05);
 }
 
 .btn-hero:is(:focus, :focus-visible, :active) {

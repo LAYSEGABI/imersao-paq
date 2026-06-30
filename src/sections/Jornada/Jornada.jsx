@@ -1,5 +1,7 @@
 import './Jornada.css';
 import heroIMG from '../../assets/heroImg.png';
+import Splash from '../../assets/splash.png';
+
 
 export default function Jornada() {
   return (
@@ -9,20 +11,22 @@ export default function Jornada() {
           
           {/* Cabeçalho da Seção com as imagens "splash" laterais */}
           <div className="jornada-header">
-            <div className="splash-img left">
-              <img src={heroIMG} alt="Elemento decorativo esquerdo" />
-            </div>
             
             <div className="jornada-header-text">
+
+            <div className="splash-img left">
+              <img src={Splash} alt="Elemento decorativo esquerdo" />
+            </div>
               <h2>
                 SUA <span className="text-highlight">JORNADA</span> NO PAQ
               </h2>
-              <p>Cada etapa <strong>prepara você para o próximo desafio.</strong></p>
+            <div className="splash-img right">
+              <img src={Splash} alt="Elemento decorativo direito" />
             </div>
 
-            <div className="splash-img right">
-              <img src={heroIMG} alt="Elemento decorativo direito" />
             </div>
+              <p>Cada etapa <strong>prepara você para o próximo desafio.</strong></p>
+
           </div>
 
           {/* Trilha / Timeline */}

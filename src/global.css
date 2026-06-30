@@ -5,7 +5,7 @@
   
   /* Cores de Destaque (Brand) */
   --color-primary: #00D2FF;   /* Azul neon (ex: títulos e ícones) */
-  --color-secondary: #7B61FF; /* Roxo (ex: botões e detalhes) */
+  --color-secondary: #1f83f7; /* Roxo (ex: botões e detalhes) */
   
   /* Cores de Texto */
   --text-title: #FFFFFF;      /* Branco puro para títulos */
@@ -45,11 +45,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--bg-main);
+  background: var(--border-color);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--border-color);
+  background: var(--color-primary);
   border-radius: 4px;
 }
 
