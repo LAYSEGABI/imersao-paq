@@ -259,10 +259,6 @@ textarea {
     grid-template-columns: 1fr; /* Todos os inputs empilhados no mobile */
   }
 
-  .input-group.full-width {
-    grid-column: span 1;
-  }
-
   .form-actions {
     flex-direction: column-reverse;
   }
